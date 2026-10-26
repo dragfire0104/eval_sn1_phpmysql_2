@@ -1,0 +1,312 @@
+/* Styles en plus de style.css : classement, jeu, messages d erreur */
+
+/* ---------- Page classement ---------- */
+.classement {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 16px;
+}
+
+.onglets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.onglet {
+    padding: 8px 18px;
+    border: 2px solid var(--couleur);
+    border-radius: 999px;
+    color: var(--couleur);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.onglet.actif,
+.onglet:hover {
+    background: var(--couleur);
+    color: white;
+}
+
+.sous-titre {
+    color: #666;
+}
+
+.tableau-classement {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.tableau-classement th,
+.tableau-classement td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e5e1ef;
+}
+
+.tableau-classement th {
+    color: #3b1f78;
+}
+
+/* Le podium en gras */
+.tableau-classement tbody tr:nth-child(-n+3) {
+    font-weight: bold;
+}
+
+.vide {
+    padding: 20px;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    text-align: center;
+    color: #666;
+}
+
+/* ---------- Messages d'erreur (connexion / inscription) ---------- */
+.erreur {
+    background: #fde8ea;
+    color: #b0182b;
+    border: 1px solid #f3b6be;
+    border-radius: 8px;
+    padding: 10px 14px;
+}
+
+/* Le bouton "Jouer" est dans un petit formulaire */
+.card form {
+    margin: 0;
+}
+
+/* ---------- Page de jeu ---------- */
+.jeu {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 0 16px;
+}
+
+.carte-jeu {
+    border-top: 6px solid var(--couleur);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.carte-jeu .dot {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background: var(--couleur);
+}
+
+.indice {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: var(--couleur);
+}
+
+.form-jeu {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.form-jeu input {
+    width: 160px;
+    padding: 10px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.liste-essais {
+    text-align: left;
+    display: inline-block;
+}
+
+.fin.gagne h1 { color: #3dae4a; }
+.fin.perdu h1 { color: #d7263d; }
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+/* ===== Page Statistiques ===== */
+
+:root {
+    --stats-bg: #f5f6fa;
+    --stats-carte: #ffffff;
+    --stats-texte: #2d3142;
+    --stats-texte-doux: #6b7083;
+    --stats-accent: #4f6df5;
+    --stats-accent-clair: #e8ecff;
+    --stats-bordure: #e3e5ee;
+    --stats-gagne: #1f9d55;
+    --stats-perdu: #d64545;
+    --stats-rayon: 12px;
+    --stats-ombre: 0 2px 8px rgba(30, 35, 60, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --stats-bg: #161821;
+        --stats-carte: #20232f;
+        --stats-texte: #e6e8f0;
+        --stats-texte-doux: #9a9fb3;
+        --stats-accent: #7b93ff;
+        --stats-accent-clair: #2a3050;
+        --stats-bordure: #2f3344;
+        --stats-gagne: #4ccb80;
+        --stats-perdu: #f07070;
+        --stats-ombre: 0 2px 8px rgba(0, 0, 0, 0.35);
+    }
+}
+
+.stats {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 1rem 3rem;
+    color: var(--stats-texte);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.stats h1 {
+    font-size: 1.8rem;
+    margin: 0 0 1.5rem;
+    text-align: center;
+}
+
+/* ----- Cartes résumé ----- */
+
+.stats-resume {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.stat {
+    background: var(--stats-carte);
+    border: 1px solid var(--stats-bordure);
+    border-top: 4px solid var(--stats-accent);
+    border-radius: var(--stats-rayon);
+    box-shadow: var(--stats-ombre);
+    padding: 1.2rem 1rem;
+    text-align: center;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.stat:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(30, 35, 60, 0.12);
+}
+
+.stat h2 {
+    margin: 0 0 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--stats-texte-doux);
+}
+
+.stat p {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--stats-accent);
+    font-variant-numeric: tabular-nums;
+}
+
+/* ----- Sections tableaux ----- */
+
+.stats-niveaux {
+    margin-bottom: 2.5rem;
+}
+
+.stats-niveaux h2 {
+    font-size: 1.25rem;
+    margin: 0 0 0.8rem;
+    padding-left: 0.6rem;
+    border-left: 4px solid var(--stats-accent);
+}
+
+.stats-niveaux table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--stats-carte);
+    border: 1px solid var(--stats-bordure);
+    border-radius: var(--stats-rayon);
+    box-shadow: var(--stats-ombre);
+    overflow: hidden;
+    font-variant-numeric: tabular-nums;
+}
+
+.stats-niveaux th,
+.stats-niveaux td {
+    padding: 0.75rem 1rem;
+    text-align: center;
+}
+
+.stats-niveaux th {
+    background: var(--stats-accent-clair);
+    color: var(--stats-texte);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.stats-niveaux th:first-child,
+.stats-niveaux td:first-child {
+    text-align: left;
+}
+
+.stats-niveaux td {
+    border-top: 1px solid var(--stats-bordure);
+}
+
+.stats-niveaux tbody tr:nth-child(even) {
+    background: rgba(127, 127, 160, 0.04);
+}
+
+.stats-niveaux tbody tr:hover {
+    background: var(--stats-accent-clair);
+}
+
+/* Colonne "Résultat" de l'historique (3e colonne) */
+.stats-niveaux td:nth-child(3) {
+    font-weight: 600;
+}
+
+/* Message "aucune partie" */
+.stats-niveaux > p {
+    background: var(--stats-carte);
+    border: 1px dashed var(--stats-bordure);
+    border-radius: var(--stats-rayon);
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--stats-texte-doux);
+}
+
+.stats-niveaux > p a {
+    display: inline-block;
+    margin-left: 0.5rem;
+    padding: 0.4rem 0.9rem;
+    background: var(--stats-accent);
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.stats-niveaux > p a:hover {
+    filter: brightness(1.1);
+}

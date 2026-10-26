@@ -1,0 +1,166 @@
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #f3f4f8;
+  margin: 0px;
+}
+
+.nav_barre {
+    display: flex;
+    align-items: center;
+    background-color: #1e2140;
+    justify-content: space-between;
+    color: #fff;
+    padding: 0 24px;
+    height: 56px;
+}
+.nav_link a {
+    color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+.nav_link {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style:none;
+}
+.nav_title{
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+.choix {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  background: #f5f6fa;
+  border: 1px solid #dfe2ec;
+  border-radius: 8px;
+}
+
+.card h2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.2rem;
+  color: #1a1c2e;
+  margin-bottom: 14px;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--couleur);
+}
+
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.3;
+  color: #5d6178;
+}
+
+.btn-jouer {
+  align-self: flex-end;
+  margin-top: -4px;
+  padding: 9px 28px;
+  background: var(--couleur);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-jouer:hover {
+  filter: brightness(0.92);
+}
+
+.btn-jouer:focus-visible {
+  outline: 3px solid #1e2140;
+  outline-offset: 2px;
+}
+.inscription {
+  max-width: 400px;
+  margin: 48px auto;
+  padding: 28px;
+  background: #f5f6fa;
+  border: 1px solid #dfe2ec;
+  border-radius: 8px;
+}
+
+.inscription h2 {
+  font-size: 1.5rem;
+  color: #1a1c2e;
+  margin-bottom: 24px;
+}
+
+.champ {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.champ label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1a1c2e;
+}
+
+.champ input {
+  padding: 10px 12px;
+  font-size: 1rem;
+  background: #fff;
+  border: 1px solid #c9ccda;
+  border-radius: 6px;
+}
+
+.champ input:focus {
+  outline: 3px solid #6b74d6;
+  outline-offset: 0;
+  border-color: #1e2140;
+}
+
+.btn-inscription {
+  width: 100%;
+  padding: 12px;
+  background: #1e2140;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-inscription:hover {
+  background: #2d3160;
+}
+
+.lien-connexion {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #5d6178;
+}
+
+.lien-connexion a {
+  color: #1e2140;
+  font-weight: 600;
+}
